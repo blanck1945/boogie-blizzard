@@ -1,6 +1,7 @@
 # pages/1_📊_Estadísticas.py
 import streamlit as st
 import requests
+import os
 
 st.set_page_config(page_title="Blizzard IG - Estadísticas", layout="wide")
 
@@ -27,7 +28,7 @@ if not media_id:
     st.stop()
 
 # 2) Llamar al backend para obtener stats dummy
-backend_base_url = "http://localhost:3000"  # Ajustá si cambia el puerto
+backend_base_url = os.getenv("APPLICATION_MICROSERVICE_URL", "http://localhost:3000")
 
 stats_from_backend = None
 error_backend = None

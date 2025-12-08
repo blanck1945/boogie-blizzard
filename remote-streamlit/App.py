@@ -1,4 +1,7 @@
 # App.py
+from dotenv import load_dotenv
+
+load_dotenv()
 import streamlit as st
 
 st.set_page_config(page_title="IG Analytics", layout="centered")

@@ -2,15 +2,15 @@
 import type { FormEvent } from "react";
 import { useState } from "react";
 import axios from "axios";
-import { useYourIdAuth } from "../sdk/useYourIDAuth";
+// import { useYourIdAuth } from "../sdk/useYourIDAuth";
 import Sidebar from "../components/Sidebar";
 
 export const HomePage = () => {
-  useYourIdAuth({
-    applicationBaseUrl: import.meta.env.VITE_APPLICATION_MICROSERVICE_URL,
-    yourIdLoginUrl: import.meta.env.VITE_YOUR_ID_LOGIN_URL,
-    env: import.meta.env.VITE_ENV,
-  });
+  // useYourIdAuth({
+  //   applicationBaseUrl: import.meta.env.VITE_APPLICATION_MICROSERVICE_URL,
+  //   yourIdLoginUrl: import.meta.env.VITE_YOUR_ID_LOGIN_URL,
+  //   env: import.meta.env.VITE_ENV,
+  // });
 
   const [postUrl, setPostUrl] = useState("");
   const [preview, setPreview] = useState<any>(null);
